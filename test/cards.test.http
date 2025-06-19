@@ -1,0 +1,38 @@
+### -----------------------------------------------------------------------------------
+
+### Obtener todos las tarjetas
+GET http://127.0.0.1:8080/tarjetas/verTarjetas
+
+### -----------------------------------------------------------------------------------
+
+### Obtener tarjeta por usuario
+GET http://127.0.0.1:8080/tarjetas/tarjeta/999
+
+### -----------------------------------------------------------------------------------
+
+### crear una tarjeta
+POST http://127.0.0.1:8080/tarjetas/crearTarjeta
+Content-Type: application/json
+
+{
+    "cardNumber": "999",
+    "cardHolder": "la suerte",
+    "expirationDate": "12/26",
+    "cvv": "346",
+    "email": "mitarjeta@mail.com"
+}
+
+### -----------------------------------------------------------------------------------
+
+### modificar una tarjeta
+PUT http://127.0.0.1:8080/tarjetas/modificarTarjeta/999
+Content-Type: application/json
+
+{
+  "cvv": "666"
+}
+
+### -----------------------------------------------------------------------------------
+
+### eliminar una tarjeta
+DELETE http://127.0.0.1:8080/tarjetas/borrarTarjeta/1702
