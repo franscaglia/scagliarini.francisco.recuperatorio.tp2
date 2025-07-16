@@ -1,8 +1,8 @@
 import express from "express"
-import { cardRouter } from "./router/card.router.js"
 import { config } from "./config/config.js"
-import mongoConectionInstance from "./db/mongo.connection.js"
+import { cardRouter } from "./router/card.router.js"
 
+import mongoConectionInstance from "./db/mongo.connection.js"
 await mongoConectionInstance.connect()
 
 const app = express()
